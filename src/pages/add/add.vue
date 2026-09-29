@@ -123,10 +123,10 @@ function analyze() {
 
   if (photos.value.length > 0 && apiKey.value) {
     // AI vision analysis
-    var provider = provider.value
+    var selectedProvider = provider.value
     var apiUrl, model
-    if (provider === 'zai') { apiUrl = 'https://open.bigmodel.cn/api/paas/v4/chat/completions'; model = 'glm-4v' }
-    else if (provider === 'qwen') { apiUrl = 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions'; model = 'qwen-vl-plus' }
+    if (selectedProvider === 'zai') { apiUrl = 'https://open.bigmodel.cn/api/paas/v4/chat/completions'; model = 'glm-4v' }
+    else if (selectedProvider === 'qwen') { apiUrl = 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions'; model = 'qwen-vl-plus' }
     else { apiUrl = 'https://api.openai.com/v1/chat/completions'; model = 'gpt-4o-mini' }
 
     var msgContent = [{ type: 'text', text: '识别图片中的所有食物。用中文回复，每行一个：食物名(分量) 热量kcal。只列食物。' }]
