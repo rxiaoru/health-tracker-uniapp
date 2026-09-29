@@ -1,0 +1,57 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "健康手账",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/stats/stats",
+      "style": {
+        "navigationBarTitleText": "分析",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/journal/journal",
+      "style": {
+        "navigationBarTitleText": "日记",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/add/add",
+      "style": {
+        "navigationBarTitleText": "记录饮食",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/body/body",
+      "style": {
+        "navigationBarTitleText": "体型分析",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#A8A29E",
+    "selectedColor": "#D4572E",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "今日", "iconPath": "static/tab-home.png", "selectedIconPath": "static/tab-home-active.png" },
+      { "pagePath": "pages/stats/stats", "text": "分析", "iconPath": "static/tab-stats.png", "selectedIconPath": "static/tab-stats-active.png" },
+      { "pagePath": "pages/journal/journal", "text": "日记", "iconPath": "static/tab-journal.png", "selectedIconPath": "static/tab-journal-active.png" }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "健康手账",
+    "navigationBarBackgroundColor": "#F7F4EF",
+    "backgroundColor": "#F7F4EF"
+  }
+}

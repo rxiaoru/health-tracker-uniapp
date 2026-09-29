@@ -1,0 +1,29 @@
+{
+  "name": "健康手账",
+  "appid": "wx9a2293a21a16e3bf",
+  "description": "体重与饮食追踪",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "mp-weixin": {
+    "appid": "wx9a2293a21a16e3bf",
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "enhance": true,
+      "postcss": true,
+      "minified": true
+    },
+    "usingComponents": true,
+    "permission": {
+      "scope.userLocation": {
+        "desc": "你的位置信息将用于记录运动数据"
+      }
+    },
+    "requiredBackgroundModes": [],
+    "plugins": {},
+    "cloudfunctionRoot": "",
+    "lazyCodeLoading": "requiredComponents"
+  },
+  "vueVersion": "3"
+}
