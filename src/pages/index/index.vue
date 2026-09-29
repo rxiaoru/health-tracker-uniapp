@@ -191,16 +191,7 @@ function updateDisplay() {
 const changeKg = computed(() => (parseFloat(currentWeight.value) - 70).toFixed(1))
 const toTarget = computed(() => (parseFloat(currentWeight.value) - 70).toFixed(1))
 
-const meals = ref([
-  { type: '早餐', icon: '🌅', cls: 'breakfast', time: '早上', kcal: 145, detail: '拿铁、全麦面包' },
-  { type: '午餐', icon: '🍱', cls: 'lunch', time: '中午', kcal: 900, detail: '煎蛋、牛肉、虾仁、烤肠、鸡米花、菠菜、米饭' }
-])
 
-const advice = ref({
-  good: ['体重回落(↓1.4kg)', '午餐蛋白质充足'],
-  tips: ['鸡米花和烤肠热量较高', '晚餐建议清淡', '多喝水帮助代谢'],
-  overall: '午餐蛋白质很棒，但炸物偏多，晚餐吃清淡点就好'
-})
 
 onMounted(() => {
   const now = new Date()
