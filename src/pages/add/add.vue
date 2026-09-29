@@ -79,25 +79,27 @@ async function save() {
 </script>
 
 <style>
-.page { min-height: 100vh; background: #F7F4EF; }
-.header { padding: 20rpx 40rpx 20rpx; }
-.h-title { font-size: 36rpx; font-weight: 800; color: #1C1917; }
-.content { padding: 0 40rpx 40rpx; }
-.m-sec { margin-bottom: 36rpx; }
-.m-label { font-size: 22rpx; font-weight: 700; color: #A8A29E; margin-bottom: 16rpx; display: block; text-transform: uppercase; letter-spacing: 2rpx; }
-.meal-picker { display: flex; gap: 16rpx; }
-.mp { flex: 1; padding: 24rpx 8rpx; border-radius: 24rpx; border: 3rpx solid #EAE5DD; background: #fff; font-size: 22rpx; font-weight: 700; color: #6B6560; text-align: center; }
+.page { min-height: 100vh; background: #FAF8F5; }
+.header { padding: 20rpx 32rpx 16rpx; }
+.h-title { font-size: 34rpx; font-weight: 800; color: #1C1917; }
+.content { padding: 0 32rpx 60rpx; }
+.m-sec { margin-bottom: 32rpx; }
+.m-label { font-size: 12px; font-weight: 600; color: #A8A29E; margin-bottom: 12rpx; display: block; text-transform: uppercase; letter-spacing: 1px; }
+.meal-picker { display: flex; gap: 12rpx; }
+.mp { flex: 1; padding: 20rpx 8rpx 16rpx; border-radius: 20rpx; border: 2rpx solid #EAE5DD; background: #fff; font-size: 22rpx; font-weight: 600; color: #6B6560; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8rpx; transition: all .2s; }
+.mp-i { font-size: 32rpx; display: block; }
 .mp.active { border-color: #D4572E; color: #D4572E; background: #FDF0EA; }
-.mp-i { display: block; font-size: 36rpx; margin-bottom: 8rpx; }
-.m-input { width: 100%; min-height: 200rpx; padding: 28rpx; border-radius: 28rpx; border: 3rpx solid #EAE5DD; font-size: 30rpx; background: #fff; color: #1C1917; }
-.m-btn { width: 100%; padding: 30rpx; border-radius: 28rpx; border: none; background: #D4572E; color: #fff; font-size: 30rpx; font-weight: 800; margin-top: 20rpx; }
-.result { margin-top: 28rpx; padding: 32rpx; background: #fff; border-radius: 28rpx; box-shadow: 0 2rpx 12rpx rgba(28,25,23,0.04); }
-.ar-title { font-size: 30rpx; font-weight: 800; color: #1C1917; display: block; margin-bottom: 20rpx; }
-.ar-item { display: flex; justify-content: space-between; align-items: center; padding: 16rpx 0; border-bottom: 1rpx dashed #EAE5DD; }
-.ar-item .k { font-size: 26rpx; color: #1C1917; font-weight: 600; }
-.ar-item .kd { font-size: 22rpx; color: #A8A29E; }
-.ar-item .v { font-size: 28rpx; font-weight: 800; color: #D4572E; }
-.ar-total { display: flex; justify-content: space-between; padding: 24rpx 0 8rpx; font-size: 28rpx; font-weight: 800; color: #1C1917; }
-.ar-total .v { font-size: 40rpx; color: #D4572E; }
-.save-btn { width: 100%; padding: 26rpx; border-radius: 24rpx; border: none; background: #3D8B6E; color: #fff; font-size: 28rpx; font-weight: 800; margin-top: 24rpx; }
+.m-input { width: 100%; box-sizing: border-box; min-height: 180rpx; padding: 24rpx; border-radius: 20rpx; border: 2rpx solid #EAE5DD; font-size: 28rpx; background: #fff; color: #1C1917; line-height: 1.6; }
+.m-btn { width: 100%; box-sizing: border-box; padding: 26rpx; border-radius: 24rpx; border: none; background: #D4572E; color: #fff; font-size: 30rpx; font-weight: 700; margin-top: 20rpx; text-align: center; display: flex; align-items: center; justify-content: center; }
+.m-btn::after { border: none; }
+.result { margin-top: 28rpx; padding: 28rpx; background: #fff; border-radius: 24rpx; box-shadow: 0 2rpx 12rpx rgba(28,25,23,0.04); }
+.ar-title { font-size: 28rpx; font-weight: 800; color: #1C1917; display: block; margin-bottom: 16rpx; }
+.ar-item { display: flex; justify-content: space-between; align-items: center; padding: 14rpx 0; border-bottom: 1rpx solid #F0EDE8; }
+.ar-item .k { font-size: 26rpx; color: #1C1917; font-weight: 500; }
+.ar-item .kd { font-size: 22rpx; color: #A8A29E; margin-left: 8rpx; }
+.ar-item .v { font-size: 26rpx; font-weight: 700; color: #D4572E; }
+.ar-total { display: flex; justify-content: space-between; align-items: center; padding: 20rpx 0 8rpx; font-size: 26rpx; font-weight: 700; color: #1C1917; }
+.ar-total .v { font-size: 36rpx; color: #D4572E; font-weight: 800; }
+.save-btn { width: 100%; box-sizing: border-box; padding: 24rpx; border-radius: 24rpx; border: none; background: #3D8B6E; color: #fff; font-size: 28rpx; font-weight: 700; margin-top: 24rpx; text-align: center; }
+.save-btn::after { border: none; }
 </style>

@@ -36,17 +36,18 @@ function addEvent() {
 </script>
 
 <style>
-.page { min-height: 100vh; background: #F7F4EF; }
-.header { display: flex; justify-content: space-between; align-items: center; padding: 20rpx 40rpx 20rpx; }
-.h-title { font-size: 36rpx; font-weight: 800; color: #1C1917; }
-.h-add { font-size: 28rpx; color: #D4572E; font-weight: 700; }
-.content { padding: 0 40rpx 40rpx; }
-.journal-entry { background: #fff; border: 1rpx solid #EAE5DD; border-radius: 28rpx; padding: 32rpx; margin-bottom: 20rpx; }
-.je-date { font-size: 20rpx; font-weight: 700; color: #A8A29E; margin-bottom: 12rpx; display: flex; align-items: center; gap: 12rpx; }
-.je-type { font-size: 18rpx; font-weight: 800; padding: 4rpx 16rpx; border-radius: 12rpx; }
-.je-type.travel { background: rgba(123,163,204,0.12); color: #5B8DB8; }
-.je-type.milestone { background: rgba(61,139,110,0.1); color: #3D8B6E; }
+.page { min-height: 100vh; background: #FAF8F5; }
+.header { display: flex; justify-content: space-between; align-items: center; padding: 20rpx 32rpx 16rpx; }
+.h-title { font-size: 34rpx; font-weight: 800; color: #1C1917; }
+.h-add { font-size: 26rpx; color: #D4572E; font-weight: 700; }
+.content { padding: 0 32rpx 60rpx; }
+.journal-entry { background: #fff; border: 1rpx solid #EAE5DD; border-radius: 24rpx; padding: 28rpx; margin-bottom: 16rpx; }
+.je-date { font-size: 22rpx; font-weight: 600; color: #A8A29E; margin-bottom: 12rpx; display: flex; align-items: center; gap: 12rpx; }
+.je-type { font-size: 18rpx; font-weight: 700; padding: 4rpx 14rpx; border-radius: 10rpx; }
+.je-type.travel { background: rgba(91,141,184,0.1); color: #5B8DB8; }
+.je-type.milestone { background: rgba(61,139,110,0.08); color: #3D8B6E; }
 .je-title { font-size: 28rpx; font-weight: 800; color: #1C1917; margin-bottom: 10rpx; display: block; }
 .je-desc { font-size: 24rpx; color: #6B6560; line-height: 1.7; display: block; }
-.je-impact { margin-top: 20rpx; padding: 20rpx; background: #F7F4EF; border-radius: 16rpx; font-size: 22rpx; color: #6B6560; border-left: 6rpx solid #D4572E; }
+.je-impact { margin-top: 16rpx; padding: 16rpx 20rpx; background: #FAF8F5; border-radius: 16rpx; border-left: 6rpx solid #D4572E; }
+.je-impact text { font-size: 22rpx; color: #6B6560; line-height: 1.7; }
 </style>

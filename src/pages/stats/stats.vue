@@ -74,23 +74,24 @@ onMounted(() => {
 </script>
 
 <style>
-.page { min-height: 100vh; background: #F7F4EF; }
-.header { padding: 20rpx 40rpx 20rpx; }
-.h-title { font-size: 36rpx; font-weight: 800; color: #1C1917; }
-.content { padding: 0 40rpx 40rpx; }
-.loading { text-align: center; padding: 100rpx; color: #A8A29E; font-size: 28rpx; }
-.stat-card { background: #fff; border: 1rpx solid #EAE5DD; border-radius: 28rpx; padding: 32rpx; margin-bottom: 24rpx; }
-.sc-head { font-size: 28rpx; font-weight: 800; margin-bottom: 24rpx; color: #1C1917; display: block; }
+.page { min-height: 100vh; background: #FAF8F5; }
+.header { padding: 20rpx 32rpx 16rpx; }
+.h-title { font-size: 34rpx; font-weight: 800; color: #1C1917; }
+.content { padding: 0 32rpx 60rpx; }
+.loading { text-align: center; padding: 120rpx; color: #A8A29E; font-size: 28rpx; }
+.stat-card { background: #fff; border: 1rpx solid #EAE5DD; border-radius: 24rpx; padding: 28rpx; margin-bottom: 20rpx; }
+.sc-head { font-size: 28rpx; font-weight: 800; margin-bottom: 20rpx; color: #1C1917; display: block; }
 .sc-head.green { color: #3D8B6E; }
 .sc-head.orange { color: #D4572E; }
 .sc-head.primary { color: #D4572E; }
 .sc-grid { display: flex; justify-content: space-around; text-align: center; }
-.sc-item .sc-val { font-size: 44rpx; font-weight: 800; color: #D4572E; display: block; }
-.sc-item .sc-l { font-size: 20rpx; color: #A8A29E; margin-top: 6rpx; font-weight: 600; display: block; }
-.sc-tip { font-size: 24rpx; color: #6B6560; padding: 12rpx 0; line-height: 1.7; }
+.sc-item .sc-val { font-size: 40rpx; font-weight: 800; color: #D4572E; display: block; }
+.sc-item .sc-l { font-size: 20rpx; color: #A8A29E; margin-top: 8rpx; font-weight: 600; display: block; }
+.sc-tip { font-size: 26rpx; color: #6B6560; padding: 10rpx 0; line-height: 1.7; display: flex; align-items: flex-start; gap: 12rpx; }
+.sc-tip text { flex: 1; }
 .sc-tip.warn { color: #D4572E; }
 .sc-tip.ok { color: #3D8B6E; }
-.sc-note { font-size: 20rpx; color: #A8A29E; margin-top: 12rpx; padding: 12rpx 20rpx; background: #F7F4EF; border-radius: 16rpx; font-weight: 500; }
+.sc-note { font-size: 22rpx; color: #A8A29E; margin-top: 12rpx; padding: 12rpx 20rpx; background: #FAF8F5; border-radius: 16rpx; font-weight: 500; display: block; }
 .stat-card.more { border-left: 6rpx solid #3D8B6E; }
 .stat-card.less { border-left: 6rpx solid #D4572E; }
 .stat-card.rec { border-left: 6rpx solid #D4572E; }

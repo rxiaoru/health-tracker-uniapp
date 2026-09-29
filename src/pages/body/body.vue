@@ -47,23 +47,25 @@ function analyzeBody() {
 </script>
 
 <style>
-.page { min-height: 100vh; background: #F7F4EF; }
-.header { padding: 20rpx 40rpx 20rpx; }
-.h-title { font-size: 36rpx; font-weight: 800; color: #1C1917; }
-.content { padding: 0 40rpx 40rpx; }
-.body-card { background: #fff; border: 1rpx solid #EAE5DD; border-radius: 36rpx; padding: 36rpx; margin-bottom: 28rpx; }
-.bc-head { font-size: 30rpx; font-weight: 800; color: #1C1917; margin-bottom: 24rpx; display: block; }
-.bc-row { display: flex; align-items: center; gap: 24rpx; padding: 20rpx 0; border-bottom: 1rpx solid #EAE5DD; }
+.page { min-height: 100vh; background: #FAF8F5; }
+.header { padding: 20rpx 32rpx 16rpx; }
+.h-title { font-size: 34rpx; font-weight: 800; color: #1C1917; }
+.content { padding: 0 32rpx 60rpx; }
+.body-card { background: #fff; border: 1rpx solid #EAE5DD; border-radius: 24rpx; padding: 32rpx; margin-bottom: 28rpx; }
+.bc-head { font-size: 28rpx; font-weight: 800; color: #1C1917; margin-bottom: 24rpx; display: block; }
+.bc-row { display: flex; align-items: center; gap: 20rpx; padding: 16rpx 0; border-bottom: 1rpx solid #F0EDE8; }
 .bc-row:last-child { border: none; }
-.bc-l { font-size: 26rpx; color: #6B6560; font-weight: 600; width: 80rpx; flex-shrink: 0; }
-.bc-input { flex: 1; padding: 16rpx 20rpx; border: 3rpx solid #EAE5DD; border-radius: 20rpx; font-size: 30rpx; background: #F7F4EF; color: #1C1917; }
-.bc-u { font-size: 24rpx; color: #A8A29E; font-weight: 600; width: 48rpx; }
-.bc-gender { display: flex; gap: 16rpx; flex: 1; }
-.g-btn { flex: 1; padding: 18rpx; border-radius: 20rpx; border: 3rpx solid #EAE5DD; background: #F7F4EF; font-size: 26rpx; font-weight: 700; color: #6B6560; }
+.bc-l { font-size: 26rpx; color: #6B6560; font-weight: 500; width: 72rpx; flex-shrink: 0; }
+.bc-input { flex: 1; padding: 16rpx 20rpx; border: 2rpx solid #EAE5DD; border-radius: 16rpx; font-size: 28rpx; background: #FAF8F5; color: #1C1917; text-align: left; }
+.bc-u { font-size: 24rpx; color: #A8A29E; font-weight: 500; width: 48rpx; flex-shrink: 0; }
+.bc-gender { display: flex; gap: 12rpx; flex: 1; }
+.g-btn { flex: 1; padding: 16rpx; border-radius: 16rpx; border: 2rpx solid #EAE5DD; background: #FAF8F5; font-size: 26rpx; font-weight: 600; color: #6B6560; text-align: center; margin: 0; line-height: 1; }
+.g-btn::after { border: none; }
 .g-btn.active { border-color: #D4572E; color: #D4572E; background: #FDF0EA; }
-.analyze-btn { width: 100%; padding: 30rpx; border-radius: 28rpx; border: none; background: #D4572E; color: #fff; font-size: 30rpx; font-weight: 800; }
-.result { margin-top: 28rpx; padding: 36rpx; background: #fff; border-radius: 36rpx; text-align: center; box-shadow: 0 2rpx 12rpx rgba(28,25,23,0.04); }
-.r-bmi { font-size: 60rpx; font-weight: 800; color: #1C1917; display: block; }
-.r-status { font-size: 36rpx; font-weight: 800; display: block; margin: 16rpx 0; }
+.analyze-btn { width: 100%; box-sizing: border-box; padding: 26rpx; border-radius: 24rpx; border: none; background: #D4572E; color: #fff; font-size: 30rpx; font-weight: 700; text-align: center; }
+.analyze-btn::after { border: none; }
+.result { margin-top: 28rpx; padding: 32rpx; background: #fff; border-radius: 24rpx; text-align: center; box-shadow: 0 2rpx 12rpx rgba(28,25,23,0.04); }
+.r-bmi { font-size: 56rpx; font-weight: 800; color: #1C1917; display: block; }
+.r-status { font-size: 32rpx; font-weight: 800; display: block; margin: 16rpx 0; }
 .r-advice { font-size: 26rpx; color: #6B6560; line-height: 1.7; display: block; }
 </style>
