@@ -2,13 +2,10 @@
   <view class="page">
     <view class="header">
       <view class="h-left">
-        <view class="h-logo">⚡</view>
-        <view>
-          <text class="h-greeting">{{ greeting }}</text>
-          <text class="h-date">{{ currentDate }}</text>
-        </view>
+        <text class="h-greeting">{{ greeting }}</text>
+        <text class="h-date">{{ currentDate }}</text>
       </view>
-      <view class="h-badge">{{ daysCount }} 天记录</view>
+      <view class="h-badge">{{ daysCount }} 天</view>
     </view>
 
     <view class="stats">
@@ -173,12 +170,12 @@ function goBody() { uni.navigateTo({ url: '/pages/body/body' }) }
 
 <style>
 .page { min-height: 100vh; background: #F7F4EF; padding-bottom: 120rpx; font-family: -apple-system, "PingFang SC", sans-serif; }
-.header { display: flex; justify-content: space-between; align-items: center; padding: 80rpx 40rpx 20rpx; }
-.h-left { display: flex; align-items: center; gap: 20rpx; }
-.h-logo { width: 84rpx; height: 84rpx; border-radius: 24rpx; background: linear-gradient(135deg, #E8734A, #D4907B); display: flex; align-items: center; justify-content: center; font-size: 38rpx; }
-.h-greeting { font-size: 34rpx; font-weight: 800; color: #1C1917; display: block; }
+.header { display: flex; justify-content: space-between; align-items: center; padding: 20rpx 40rpx 20rpx; }
+.h-left { display: flex; flex-direction: column; gap: 4rpx; }
+
+.h-greeting { font-size: 34rpx; font-weight: 800; color: #1C1917; display: block; letter-spacing: -0.5rpx; }
 .h-date { font-size: 22rpx; color: #A8A29E; font-weight: 500; }
-.h-badge { font-size: 20rpx; color: #6B6560; background: #fff; padding: 10rpx 24rpx; border-radius: 24rpx; font-weight: 600; }
+.h-badge { font-size: 20rpx; color: #6B6560; background: #fff; padding: 8rpx 20rpx; border-radius: 20rpx; font-weight: 600; box-shadow: 0 2rpx 8rpx rgba(28,25,23,0.04); }
 .stats { display: flex; margin: 0 40rpx 20rpx; background: #fff; border-radius: 36rpx; padding: 24rpx 0; box-shadow: 0 2rpx 16rpx rgba(28,25,23,0.04); }
 .stat { flex: 1; text-align: center; }
 .sa-num { font-size: 38rpx; font-weight: 800; color: #1C1917; }

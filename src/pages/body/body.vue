@@ -48,7 +48,7 @@ function analyzeBody() {
 
 <style>
 .page { min-height: 100vh; background: #F7F4EF; }
-.header { padding: 80rpx 40rpx 20rpx; }
+.header { padding: 20rpx 40rpx 20rpx; }
 .h-title { font-size: 36rpx; font-weight: 800; color: #1C1917; }
 .content { padding: 0 40rpx 40rpx; }
 .body-card { background: #fff; border: 1rpx solid #EAE5DD; border-radius: 36rpx; padding: 36rpx; margin-bottom: 28rpx; }

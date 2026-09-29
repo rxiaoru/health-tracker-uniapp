@@ -80,7 +80,7 @@ async function save() {
 
 <style>
 .page { min-height: 100vh; background: #F7F4EF; }
-.header { padding: 80rpx 40rpx 20rpx; }
+.header { padding: 20rpx 40rpx 20rpx; }
 .h-title { font-size: 36rpx; font-weight: 800; color: #1C1917; }
 .content { padding: 0 40rpx 40rpx; }
 .m-sec { margin-bottom: 36rpx; }

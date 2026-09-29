@@ -37,7 +37,7 @@ function addEvent() {
 
 <style>
 .page { min-height: 100vh; background: #F7F4EF; }
-.header { display: flex; justify-content: space-between; align-items: center; padding: 80rpx 40rpx 20rpx; }
+.header { display: flex; justify-content: space-between; align-items: center; padding: 20rpx 40rpx 20rpx; }
 .h-title { font-size: 36rpx; font-weight: 800; color: #1C1917; }
 .h-add { font-size: 28rpx; color: #D4572E; font-weight: 700; }
 .content { padding: 0 40rpx 40rpx; }
