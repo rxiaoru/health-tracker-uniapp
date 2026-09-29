@@ -157,6 +157,7 @@ const totalKcal = ref(1035)
 const protein = ref(48)
 const carbs = ref(95)
 const fat = ref(38)
+const bgImage = ref('')
 
 const selectedDay = computed(() => allDays.value[dayIdx.value])
 const selectedDate = computed(() => selectedDay.value.date.slice(5) + ' ' + selectedDay.value.weekday)
