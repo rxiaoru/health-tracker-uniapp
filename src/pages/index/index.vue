@@ -1,11 +1,16 @@
 <template>
   <view class="page">
+    <image v-if="bgImage" :src="bgImage" class="bg-image" mode="aspectFill" />
+    <view v-if="bgImage" class="bg-overlay"></view>
     <view class="header">
       <view class="h-left">
         <text class="h-greeting">{{ greeting }}</text>
         <text class="h-date">{{ currentDate }}</text>
       </view>
-      <view class="h-badge">{{ daysCount }} 天</view>
+      <view class="h-right">
+        <view class="h-badge">{{ daysCount }} 天</view>
+        <view class="h-btn" @tap="changeBg"><text>🖼️</text></view>
+      </view>
     </view>
 
     <view class="stats">
@@ -202,6 +207,7 @@ onMounted(() => {
   var d = String(now.getDate()).padStart(2, '0')
   var weekdays = ['周日','周一','周二','周三','周四','周五','周六']
   currentDate.value = `${y}-${m}-${d} ${weekdays[now.getDay()]}`
+  loadBg()
   loadData()
 })
 
@@ -226,17 +232,62 @@ async function loadData() {
   }
 }
 
+function changeBg() {
+  uni.chooseImage({
+    count: 1,
+    sizeType: ['compressed'],
+    sourceType: ['album', 'camera'],
+    success: function(res) {
+      var path = res.tempFilePaths[0]
+      // #ifdef H5
+      bgImage.value = path
+      localStorage.setItem('user_bg', path)
+      // #endif
+      // #ifdef MP-WEIXIN
+      var fs = uni.getFileSystemManager()
+      fs.readFile({
+        filePath: path,
+        encoding: 'base64',
+        success: function(data) {
+          bgImage.value = 'data:image/jpeg;base64,' + data.data
+          try { uni.setStorageSync('user_bg', bgImage.value) } catch(e) {}
+        }
+      })
+      // #endif
+      uni.showToast({ title: '背景已更换' })
+    }
+  })
+}
+
+function loadBg() {
+  // #ifdef MP-WEIXIN
+  try {
+    var saved = uni.getStorageSync('user_bg')
+    if (saved) bgImage.value = saved
+  } catch(e) {}
+  // #endif
+  // #ifdef H5
+  var saved = localStorage.getItem('user_bg')
+  if (saved) bgImage.value = saved
+  // #endif
+}
+
 function goAdd() { uni.navigateTo({ url: '/pages/add/add' }) }
 function goBody() { uni.navigateTo({ url: '/pages/body/body' }) }
 </script>
 
 <style>
-.page { min-height: 100vh; background: #FAF8F5; padding-bottom: 120rpx; font-family: -apple-system, "PingFang SC", sans-serif; }
+.bg-image { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+.bg-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.15); z-index: 1; }
+.page { position: relative; z-index: 2; min-height: 100vh; background: #FAF8F5; padding-bottom: 120rpx; font-family: -apple-system, "PingFang SC", sans-serif; }
 .header { display: flex; justify-content: space-between; align-items: center; padding: 20rpx 40rpx 20rpx; }
 .h-left { display: flex; flex-direction: column; gap: 4rpx; }
 
 .h-greeting { font-size: 34rpx; font-weight: 800; color: #1C1917; display: block; letter-spacing: -0.5rpx; }
 .h-date { font-size: 22rpx; color: #A8A29E; font-weight: 500; }
+.h-right { display: flex; align-items: center; gap: 12rpx; }
+.h-btn { width: 64rpx; height: 64rpx; border-radius: 20rpx; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 28rpx; box-shadow: 0 2rpx 8rpx rgba(28,25,23,0.04); }
+.h-btn:active { transform: scale(0.9); }
 .h-badge { font-size: 20rpx; color: #6B6560; background: #fff; padding: 8rpx 20rpx; border-radius: 20rpx; font-weight: 600; box-shadow: 0 2rpx 8rpx rgba(28,25,23,0.04); }
 .stats { display: flex; margin: 0 32rpx 20rpx; background: #fff; border-radius: 36rpx; padding: 24rpx 0; box-shadow: 0 2rpx 16rpx rgba(28,25,23,0.04); }
 .stat { flex: 1; text-align: center; }
